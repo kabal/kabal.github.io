@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'GWTwo';
+  src: URL('/fonts/GWTwoFont1p1.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'KabelRegular';
+  src: URL('/fonts/KabelRegular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'KrytanHandwritten';
+  src: URL('/fonts/krytan_handwritten.ttf') format('truetype');
+}
+
+.font-gw2 {
+  font-family: 'GWTwo', Helvetica, Roboto, Arial, sans-serif;
+}
+.krytan {
+  font-family: 'KrytanHandwritten', Helvetica, Roboto, Arial, sans-serif;
+}
+.kabel {
+  font-family: 'KabelRegular', Helvetica, Roboto, Arial, sans-serif;
+}
