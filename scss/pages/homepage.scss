@@ -4,6 +4,12 @@
   background-position: center bottom;
   background-attachment: fixed;
 }
+.splashText {
+  background: #00000040;
+}
+.splashText .button {
+  background-color: transparent;
+}
 .googleCalendar{
   position: relative;
   height: 0;
