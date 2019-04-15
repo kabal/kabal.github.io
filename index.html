@@ -10,28 +10,31 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-    <div id="home" class="grid-y medium-grid-frame">
-      <div class="cell header medium-cell-block-container">
-        <div data-sticky-container>
+    <div class="cell header medium-cell-block-container">
+      <div data-sticky-container>
+        <div data-sticky data-options="marginTop:0; stickyOn:small;" style="width:100%;" >
           <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
             <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
             <div class="title-bar-title">Menu</div>
           </div>
-          <div class="top-bar" id="responsive-menu" data-sticky data-options="marginTop:0;">
+          <div class="top-bar" id="responsive-menu" >
             <div class="top-bar-left">
               <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#discord">Discord</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#rules">Rules</a></li>
-                <li><a href="#join">Join</a></li>
-                <li><a href="#links">Links</a></li>
+                <li><a href="#home" data-close="responsive-menu">Home</a></li>
+                <li><a href="#events" data-close="responsive-menu">Events</a></li>
+                <li><a href="#discord" data-close="responsive-menu">Discord</a></li>
+                <li><a href="#about" data-close="responsive-menu">About</a></li>
+                <li><a href="#rules" data-close="responsive-menu">Rules</a></li>
+                <li><a href="#join" data-close="responsive-menu">Join</a></li>
+                <li><a href="#links" data-close="responsive-menu">Links</a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="grid-y medium-grid-frame">
+      <a id="home" class="anchor"></a>
       <div class="cell medium-auto medium-cell-block-container splash-container align-center">
         <div class="grid-container">
           <div class="grid-y grid-padding-y">
@@ -47,23 +50,26 @@
     </div>
     <section class="grid-container main">
       <div class="grid-x grid-padding-x">
-        <div id="events" class="cell small-12 medium-7">
+        <div class="cell medium-7">
+          <a id="events" class="anchor"></a>
           <h2 class="section-start">Events Calendar</h2>
           <div class="googleCalendar">
             <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=n5ccj3lfblfraspvmk3egpipms%40group.calendar.google.com&amp;color=%23125A12" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
           </div>
         </div>
-        <div id="discord" class="cell small-12 medium-5">
+        <div class="cell medium-5">
+          <a id="discord" class="anchor"></a>
           <h2 class="section-start">Discord</h2>
           <iframe src="https://discordapp.com/widget?id=134848705424654336&theme=dark" width="100%" height="600px" frameborder="0"></iframe>
         </div>
-        <div id="about" class="cell">
+        <div class="cell">
+          <a id="about" class="anchor"></a>
           <h2 class="section-start">Welcome to Kabal</h2>
           <p>Kabal was originally established as a Guild Wars guild in 2007. Since then Kabal has spread across multiple games and become a more general gaming community. Kabal has had members and chapters in games ranging from MMOs like Runes of Magic, Lord of the Rings Online, DC Universe Online, Rift, Guild Wars 2, Final Fantasy 14 and the original Guild Wars to competitive/cooperative games such as Left 4 Dead, Team Fortress, Dungeon Defenders, League of Legends, DOTA 2, and Minecraft.</p>
           <p>Kabal utilizes tools such as Discord for voice chat and Slack for text chat to foster a friendly and active community outside of a specific game, keeping the guild connected no matter what any member happens to be doing at the time.</p>
           <p>If you are seeking a community that spans beyond a single game and focuses on promoting friendship, fellowship and synergy between members and the guild, rather than the pursuit of progression and loot, then you may consider joining our family!</p>
           <div class="grid-x grid-padding-x">
-            <div class="cell small-12 medium-5">
+            <div class="cell medium-5">
               <h3>Guild Leaders</h3>
               <p>Kabal was originally founded in Guild Wars by the following three individuals. These three continue to lead and administrate the guild with the help of the guild officers.</p>
               <ul>
@@ -72,7 +78,7 @@
                 <li>Trev</li>
               </ul>
             </div>
-            <div class="cell small-12 medium-7">
+            <div class="cell medium-7">
               <h3>Guild Officers</h3>
               <p>Kabal officers are members who took it upon themselves to go above and beyond the call of duty and showed leadership in the greater structure of the guild and community. These individuals volunteered to help lead the guild in an official capacity and were promoted to officer status by the guild leadership.</p>
               <ul>
@@ -88,7 +94,8 @@
             </div>
           </div>
         </div>
-        <div id="rules" class="cell">
+        <div class="cell">
+          <a id="rules" class="anchor"></a>
           <h2 class="section-start">Kabal Guild Rules & Charter</h2>
           <p>The following should be read and understood by all guild members. Any all questions should be directed to an officer or leader of Kabal.</p>
           <p>The Guild Leaders reserve the right to make changes or exceptions to these rules at any time.</p>
@@ -126,16 +133,18 @@
           <h3>Do you want a dental plan with that?</h3>
           <p>Yes, I'd like to keep my teeth healthy to eat Quaggan babies (This should be your answer in the applications to verify that you have read the Kabal's Righteous Rules!)</p>
         </div>
-        <div id="join" class="cell">
+        <div class="cell">
+          <a id="join" class="anchor"></a>
           <h2 class="section-start">Apply to Kabal</h2>
           <p>Kabal is recruiting. We are a small gaming community looking for people who want a guild to call home. Adventures wanted for Hazardous Journey. Small wages, bitter cold, long months of complete darkness, constant danger, safe return doubtful.</p>
           <h3>Apply Now</h3>
           <p>If you have read and agree to the rules listed above, you may apply <a href="https://forms.gle/Lb9QwX84aDCZ8awF9" rel="nofollow" target="_blank">here</a>.</p>
         </div>
-        <div id="links" class="cell">
+        <div class="cell">
+          <a id="links" class="anchor"></a>
           <h2 class="section-start">Helpful Links</h2>
           <div class="grid-x grid-padding-x">
-            <div class="cell small-12 medium-6 large-4">
+            <div class="cell medium-6 large-4">
               <h3>Kabal</h3>
               <ul>
                 <li><a href="http://goo.gl/forms/EPrsVdnzCI" rel="nofollow" target="_blank">Guild Text Chat - Slack<br>(For existing members)</a></li>
@@ -143,7 +152,7 @@
                 <li><a href="http://kabalseed.shivtr.com" rel="nofollow" target="_blank">Legacy Website - Shivtr</a></li>
               </ul>
             </div>
-            <div class="cell small-12 medium-6 large-4">
+            <div class="cell medium-6 large-4">
               <h3>Guild Wars 2</h3>
               <ul>
                 <li><a href="http://www.guildwars2.com" rel="nofollow" target="_blank">Official Site</a></li>
@@ -154,7 +163,7 @@
                 <li><a href="https://gw2timer.com" rel="nofollow" target="_blank">GW2 Boss Timer</a></li>
               </ul>
             </div>
-            <div class="cell small-12 medium-6 large-4">
+            <div class="cell medium-6 large-4">
               <h3>Final Fantasy 14</h3>
               <ul>
                 <li><a href="https://na.finalfantasyxiv.com" rel="nofollow" target="_blank">Official Site</a></li>
