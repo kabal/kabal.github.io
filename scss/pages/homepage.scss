@@ -3,8 +3,11 @@
   background-position: center center;
   background-attachment: fixed;
 }
+.splashContainer {
+  align-items: center !important;
+}
 .splashText {
-  background: #00000060;
+  background: rgba(0, 0, 0, 0.4);
   padding: 15px;
 }
 .splashText .button {
