@@ -1,12 +1,3 @@
-.main {
-  background: #00000060;
-}
-.main section {
-  background-image: linear-gradient(to bottom right, #000000, #202020);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100%;
-}
 h3, .h3 {
   margin-bottom: 0;
 }
@@ -14,8 +5,8 @@ h3, .h3 {
   display: block; 
   position: relative; 
   
-  //set this to the height of the divider, - height of the top bar in small ui
-  top: calc(-136px - 40px); 
+  //set this to the -height of the divider, - height of the top bar in small ui
+  top: calc(-20px - 40px); 
 }
 
 .top-bar, .top-bar ul, .title-bar {
