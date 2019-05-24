@@ -20,19 +20,17 @@
   margin-bottom: 20px;
 }
 
-.iframeContainer {
+.calendarContainer {
   position: relative;
   height: 0;
   width: 100%;
   padding-bottom: 100%;
 }
-.iframeContainer iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+.discordContainer {
+  position: relative;
+  height: 0;
   width: 100%;
-  height: 100%;
-  padding-bottom: 5px;
+  padding-bottom: 200%;
 }
 .youtubeContainer {
   position: relative;
@@ -40,7 +38,7 @@
   width: 100%;
   padding-bottom: 57%;
 }
-.youtubeContainer iframe {
+.calendarContainer iframe, .youtubeContainer iframe, .discordContainer iframe {
   position: absolute;
   top: 0;
   left: 0;
