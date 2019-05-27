@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body class="galleryBody">
+    <div class="galleryBackground"></div>
     <div class="cell header medium-cell-block-container">
       <div data-sticky-container>
         <div data-sticky data-options="marginTop:0; stickyOn:small;" style="width:100%;" >
@@ -19,15 +20,17 @@
           </div>
           <div class="top-bar" id="responsive-menu" >
             <div class="top-bar-left">
-              <ul class="menu">
-                <li><a href="/#home" data-close="responsive-menu">Home</a></li>
-                <li><a href="/gallery.html#guildBirthday" data-close="responsive-menu">Guild Birthday</a></li>
-                <li><a href="/gallery.html#guildWars2" data-close="responsive-menu">Guild Wars 2</a></li>
-                <li><a href="/gallery.html#finalFantasy14" data-close="responsive-menu">Final Fantasy 14</a></li>
-                <li><a href="/gallery.html#archeage" data-close="responsive-menu">Archeage</a></li>
-                <li><a href="/gallery.html#runesOfMagic" data-close="responsive-menu">Runes Of Magic</a></li>
-                <li><a href="/gallery.html#guildWars" data-close="responsive-menu">Guild Wars</a></li>
-                <li><a href="/gallery.html#other" data-close="responsive-menu">Other</a></li>
+              <ul class="menu" data-magellan>
+                <li><a href="/" class="linkMenuButton" data-close="responsive-menu">Home</a></li>
+                <li><a href="#guildBirthday" class="linkMenuButton" data-close="responsive-menu">Gallery</a></li>
+                <li><a href="https://shop.spreadshirt.com/kabalseed" class="linkMenuButton" rel="nofollow" target="_blank">Kabal Store </a></li>
+                <li><a href="#guildBirthday" class="anchorMenuButton" data-close="responsive-menu">Guild Birthday</a></li>
+                <li><a href="#guildWars2" class="anchorMenuButton" data-close="responsive-menu">Guild Wars 2</a></li>
+                <li><a href="#finalFantasy14" class="anchorMenuButton" data-close="responsive-menu">Final Fantasy 14</a></li>
+                <li><a href="#archeage" class="anchorMenuButton" data-close="responsive-menu">Archeage</a></li>
+                <li><a href="#runesOfMagic" class="anchorMenuButton" data-close="responsive-menu">Runes Of Magic</a></li>
+                <li><a href="#guildWars" class="anchorMenuButton" data-close="responsive-menu">Guild Wars</a></li>
+                <li><a href="#other" class="anchorMenuButton" data-close="responsive-menu">Other</a></li>
               </ul>
             </div>
           </div>
@@ -37,7 +40,7 @@
     <div class="main">
       <section class="grid-container">
         <div class="grid-x grid-padding-x">
-          <div class="cell">
+          <div class="mainCell cell">
             <a id="guildBirthday" class="anchor"></a>
             <h2 class="section-start">Guild Birthday</h2>
             <div role="region" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
@@ -72,6 +75,119 @@
                   <img class="orbit-image" src="images/gallery/guildBirthday/2012.jpg">
                   <div class="orbit-caption">Kabal Birthday Guild Picture 2012</div>
                 </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildBirthday/2011.jpg">
+                  <div class="orbit-caption">Kabal Birthday Guild Picture 2011</div>
+                </li>
+              </ul>
+              <nav class="orbit-bullets">
+                <button class="is-active" data-slide="0"></button>
+                <button data-slide="1"></button>
+                <button data-slide="2"></button>
+                <button data-slide="3"></button>
+                <button data-slide="4"></button>
+                <button data-slide="5"></button>
+                <button data-slide="6"></button>
+                <button data-slide="7"></button>
+              </nav>
+            </div>
+          </div>
+          <div class="mainCell cell">
+            <a id="guildWars2" class="anchor"></a>
+            <h2 class="section-start">Guild Wars 2</h2>
+            <div role="region" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+              <ul class="orbit-container">
+                <button class="orbit-previous">&#9664;&#xFE0E;</button>
+                <button class="orbit-next">&#9654;&#xFE0E;</button>
+                <li class="is-active orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars2/quaggan.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars2/roofParty.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars2/jump.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars2/matching.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars2/sleepover.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars2/puppet.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars2/partiedOut.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars2/tired.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars2/mizAndSmooshatron.png">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars2/fire.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars2/mad.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars2/mark.png">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars2/drowned.png">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars2/watched.png">
+                </li>
+              </ul>
+              <nav class="orbit-bullets">
+                <button class="is-active" data-slide="0"></button>
+                <button data-slide="1"></button>
+                <button data-slide="2"></button>
+                <button data-slide="3"></button>
+                <button data-slide="4"></button>
+                <button data-slide="5"></button>
+                <button data-slide="6"></button>
+                <button data-slide="7"></button>
+                <button data-slide="8"></button>
+                <button data-slide="9"></button>
+                <button data-slide="10"></button>
+                <button data-slide="11"></button>
+                <button data-slide="12"></button>
+                <button data-slide="13"></button>
+              </nav>
+            </div>
+          </div>
+          <div class="mainCell cell">
+            <a id="finalFantasy14" class="anchor"></a>
+            <h2 class="section-start">Final Fantasy 14</h2>
+            <div role="region" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+              <ul class="orbit-container">
+                <button class="orbit-previous">&#9664;&#xFE0E;</button>
+                <button class="orbit-next">&#9654;&#xFE0E;</button>
+                <li class="is-active orbit-slide">
+                  <img class="orbit-image" src="images/gallery/finalFantasy14/ourHouse.png">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/finalFantasy14/edgy.png">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/finalFantasy14/crow.png">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/finalFantasy14/miz.png">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/finalFantasy14/cruising.png">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/finalFantasy14/disappointed.png">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/finalFantasy14/lalaTower.png">
+                </li>
               </ul>
               <nav class="orbit-bullets">
                 <button class="is-active" data-slide="0"></button>
@@ -84,54 +200,7 @@
               </nav>
             </div>
           </div>
-          <div class="cell divider-6"></div>
-          <div class="cell">
-            <a id="guildWars2" class="anchor"></a>
-            <h2 class="section-start">Guild Wars 2</h2>
-            <div role="region" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
-              <ul class="orbit-container">
-                <button class="orbit-previous">&#9664;&#xFE0E;</button>
-                <button class="orbit-next">&#9654;&#xFE0E;</button>
-                <li class="is-active orbit-slide">
-                  <img class="orbit-image" src="images/gallery/placeholder1.jpg">
-                  <div class="orbit-caption">Placeholder Caption 1</div>
-                </li>
-                <li class="orbit-slide">
-                  <img class="orbit-image" src="images/gallery/placeholder2.jpg">
-                  <div class="orbit-caption">Placeholder Caption 2</div>
-                </li>
-              </ul>
-              <nav class="orbit-bullets">
-                <button class="is-active" data-slide="0"></button>
-                <button data-slide="1"></button>
-              </nav>
-            </div>
-          </div>
-          <div class="cell divider-5"></div>
-          <div class="cell">
-            <a id="finalFantasy14" class="anchor"></a>
-            <h2 class="section-start">Final Fantasy 14</h2>
-            <div role="region" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
-              <ul class="orbit-container">
-                <button class="orbit-previous">&#9664;&#xFE0E;</button>
-                <button class="orbit-next">&#9654;&#xFE0E;</button>
-                <li class="is-active orbit-slide">
-                  <img class="orbit-image" src="images/gallery/placeholder1.jpg">
-                  <div class="orbit-caption">Placeholder Caption 1</div>
-                </li>
-                <li class="orbit-slide">
-                  <img class="orbit-image" src="images/gallery/placeholder2.jpg">
-                  <div class="orbit-caption">Placeholder Caption 2</div>
-                </li>
-              </ul>
-              <nav class="orbit-bullets">
-                <button class="is-active" data-slide="0"></button>
-                <button data-slide="1"></button>
-              </nav>
-            </div>
-          </div>
-          <div class="cell divider-4"></div>
-          <div class="cell">
+          <div class="mainCell cell">
             <a id="archeage" class="anchor"></a>
             <h2 class="section-start">Archeage</h2>
             <div role="region" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
@@ -139,22 +208,59 @@
                 <button class="orbit-previous">&#9664;&#xFE0E;</button>
                 <button class="orbit-next">&#9654;&#xFE0E;</button>
                 <li class="is-active orbit-slide">
-                  <img class="orbit-image" src="images/gallery/placeholder1.jpg">
-                  <div class="orbit-caption">Placeholder Caption 1</div>
+                  <img class="orbit-image" src="images/gallery/archeage/kabalFleet.jpg">
                 </li>
                 <li class="orbit-slide">
-                  <img class="orbit-image" src="images/gallery/placeholder2.jpg">
-                  <div class="orbit-caption">Placeholder Caption 2</div>
+                  <img class="orbit-image" src="images/gallery/archeage/cozyHome.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/archeage/ourTown.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/archeage/trainFromAbove.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/archeage/kabalTrain.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/archeage/fishing.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/archeage/ferryingSupplies.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/archeage/drydock.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/archeage/fleetLeader.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/archeage/kabalFleetFormation.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/archeage/landBoat.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/archeage/landBoatPush.jpg">
                 </li>
               </ul>
               <nav class="orbit-bullets">
                 <button class="is-active" data-slide="0"></button>
                 <button data-slide="1"></button>
+                <button data-slide="2"></button>
+                <button data-slide="3"></button>
+                <button data-slide="4"></button>
+                <button data-slide="5"></button>
+                <button data-slide="6"></button>
+                <button data-slide="7"></button>
+                <button data-slide="8"></button>
+                <button data-slide="9"></button>
+                <button data-slide="10"></button>
+                <button data-slide="11"></button>
               </nav>
             </div>
           </div>
-          <div class="cell divider-3"></div>
-          <div class="cell">
+          <div class="mainCell cell">
             <a id="runesOfMagic" class="anchor"></a>
             <h2 class="section-start">Runes Of Magic</h2>
             <div role="region" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
@@ -162,22 +268,51 @@
                 <button class="orbit-previous">&#9664;&#xFE0E;</button>
                 <button class="orbit-next">&#9654;&#xFE0E;</button>
                 <li class="is-active orbit-slide">
-                  <img class="orbit-image" src="images/gallery/placeholder1.jpg">
-                  <div class="orbit-caption">Placeholder Caption 1</div>
+                  <img class="orbit-image" src="images/gallery/runesOfMagic/rom1.jpg">
                 </li>
                 <li class="orbit-slide">
-                  <img class="orbit-image" src="images/gallery/placeholder2.jpg">
-                  <div class="orbit-caption">Placeholder Caption 2</div>
+                  <img class="orbit-image" src="images/gallery/runesOfMagic/rom2.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/runesOfMagic/rom3.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/runesOfMagic/rom4.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/runesOfMagic/rom5.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/runesOfMagic/rom6.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/runesOfMagic/rom7.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/runesOfMagic/rom8.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/runesOfMagic/rom9.jpg">
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/runesOfMagic/rom10.jpg">
                 </li>
               </ul>
               <nav class="orbit-bullets">
                 <button class="is-active" data-slide="0"></button>
                 <button data-slide="1"></button>
+                <button data-slide="2"></button>
+                <button data-slide="3"></button>
+                <button data-slide="4"></button>
+                <button data-slide="5"></button>
+                <button data-slide="6"></button>
+                <button data-slide="7"></button>
+                <button data-slide="8"></button>
+                <button data-slide="9"></button>
               </nav>
             </div>
           </div>
-          <div class="cell divider-2"></div>
-          <div class="cell">
+          <div class="mainCell cell">
             <a id="guildWars" class="anchor"></a>
             <h2 class="section-start">Guild Wars</h2>
             <div role="region" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
@@ -185,22 +320,76 @@
                 <button class="orbit-previous">&#9664;&#xFE0E;</button>
                 <button class="orbit-next">&#9654;&#xFE0E;</button>
                 <li class="is-active orbit-slide">
-                  <img class="orbit-image" src="images/gallery/placeholder1.jpg">
-                  <div class="orbit-caption">Placeholder Caption 1</div>
+                  <img class="orbit-image" src="images/gallery/guildWars/gw1.jpg">
+                  <div class="orbit-caption"></div>
                 </li>
                 <li class="orbit-slide">
-                  <img class="orbit-image" src="images/gallery/placeholder2.jpg">
-                  <div class="orbit-caption">Placeholder Caption 2</div>
+                  <img class="orbit-image" src="images/gallery/guildWars/gw2.jpg">
+                  <div class="orbit-caption"></div>
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars/gw3.jpg">
+                  <div class="orbit-caption"></div>
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars/gw4.jpg">
+                  <div class="orbit-caption"></div>
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars/gw5.jpg">
+                  <div class="orbit-caption"></div>
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars/gw6.jpg">
+                  <div class="orbit-caption"></div>
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars/gw7.jpg">
+                  <div class="orbit-caption"></div>
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars/gw8.jpg">
+                  <div class="orbit-caption"></div>
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars/gw9.jpg">
+                  <div class="orbit-caption"></div>
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars/gw10.jpg">
+                  <div class="orbit-caption"></div>
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars/gw11.jpg">
+                  <div class="orbit-caption"></div>
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars/gw12.jpg">
+                  <div class="orbit-caption"></div>
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/guildWars/gw13.jpg">
+                  <div class="orbit-caption"></div>
                 </li>
               </ul>
               <nav class="orbit-bullets">
                 <button class="is-active" data-slide="0"></button>
                 <button data-slide="1"></button>
+                <button data-slide="2"></button>
+                <button data-slide="3"></button>
+                <button data-slide="4"></button>
+                <button data-slide="5"></button>
+                <button data-slide="6"></button>
+                <button data-slide="7"></button>
+                <button data-slide="8"></button>
+                <button data-slide="9"></button>
+                <button data-slide="10"></button>
+                <button data-slide="11"></button>
+                <button data-slide="12"></button>
               </nav>
             </div>
           </div>
-          <div class="cell divider-1"></div>
-          <div class="cell">
+          <div class="mainCell cell">
             <a id="other" class="anchor"></a>
             <h2 class="section-start">Other</h2>
             <div role="region" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
@@ -208,17 +397,47 @@
                 <button class="orbit-previous">&#9664;&#xFE0E;</button>
                 <button class="orbit-next">&#9654;&#xFE0E;</button>
                 <li class="is-active orbit-slide">
-                  <img class="orbit-image" src="images/gallery/placeholder1.jpg">
-                  <div class="orbit-caption">Placeholder Caption 1</div>
+                  <img class="orbit-image" src="images/gallery/other/starWars1.jpg">
+                  <div class="orbit-caption">Star Wars: The Old Republic</div>
                 </li>
                 <li class="orbit-slide">
-                  <img class="orbit-image" src="images/gallery/placeholder2.jpg">
-                  <div class="orbit-caption">Placeholder Caption 2</div>
+                  <img class="orbit-image" src="images/gallery/other/starWars2.png">
+                  <div class="orbit-caption">Star Wars: The Old Republic</div>
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/other/secretWorld1.jpg">
+                  <div class="orbit-caption">Secret World Legends</div>
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/other/secretWorld2.jpg">
+                  <div class="orbit-caption">Secret World Legends</div>
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/other/secretWorld3.jpg">
+                  <div class="orbit-caption">Secret World Legends</div>
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/other/secretWorld4.jpg">
+                  <div class="orbit-caption">Secret World Legends</div>
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/other/starTrek.jpg">
+                  <div class="orbit-caption">Star Trek Online</div>
+                </li>
+                <li class="orbit-slide">
+                  <img class="orbit-image" src="images/gallery/other/gta.png">
+                  <div class="orbit-caption">Grand Theft Auto 5</div>
                 </li>
               </ul>
               <nav class="orbit-bullets">
                 <button class="is-active" data-slide="0"></button>
                 <button data-slide="1"></button>
+                <button data-slide="2"></button>
+                <button data-slide="3"></button>
+                <button data-slide="4"></button>
+                <button data-slide="5"></button>
+                <button data-slide="6"></button>
+                <button data-slide="7"></button>
               </nav>
             </div>
           </div>
