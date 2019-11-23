@@ -8,16 +8,16 @@
   },
   "author": "Chris Falzone (cfalzone@aquent.com)",
   "dependencies": {
-    "foundation-sites": "^6.5.1",
+    "foundation-sites": "^6.5.3",
     "jquery": ">=3.4.0",
     "motion-ui": "~2.0.0",
-    "what-input": "^5.1.2"
+    "what-input": "^5.2.6"
   },
   "devDependencies": {
-    "autoprefixer": "^9.1.5",
-    "browser-sync": "^2.18.13",
-    "gulp": "^4.0.0",
-    "gulp-load-plugins": "^1.1.0",
+    "autoprefixer": "^9.7.2",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-load-plugins": "^1.6.0",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.1"
   }
