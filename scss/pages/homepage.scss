@@ -1,21 +1,8 @@
-.homepageBody {
-}
-.homepageBackground {
-  background: #0a0a0a url(/images/backgrounds/homepage.jpg);
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
 .splashContainer {
   align-items: center !important;
 }
 .splashText {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.8);
   padding: 15px;
 }
 .splashText .button {

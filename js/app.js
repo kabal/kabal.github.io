@@ -17,4 +17,10 @@ $(document).ready(function($) {
     var iframe_html = pref + timezone.name() + suff;
     calendar.innerHTML = iframe_html;
   }
+  
+  var pageBackground = $('.pageBackground');
+  if (pageBackground.length > 0){
+    var pageBackgroundCount = 7;
+    pageBackground.css('background-image','url(/images/backgrounds/'+Math.floor((Math.random() * pageBackgroundCount) + 1)+'.jpg)');
+  }
 });
