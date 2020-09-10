@@ -20,7 +20,7 @@ $(document).ready(function($) {
   
   var pageBackground = $('.pageBackground');
   if (pageBackground.length > 0){
-    var pageBackgroundCount = 15;
+    var pageBackgroundCount = 16;
     pageBackground.css('background-image','url(/images/backgrounds/'+Math.floor((Math.random() * pageBackgroundCount) + 1)+'.jpg)');
   }
 });
