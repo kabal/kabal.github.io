@@ -33,3 +33,19 @@
   -webkit-filter: invert(100%) grayscale(100%) contrast(100%) brightness(200%)!important;
   filter: invert(100%) grayscale(100%) contrast(100%) brightness(200%)!important;
 }
+
+.quoteContainer {
+  font-family: "Lucida Console", Monaco, monospace;
+  width: fit-content;
+  margin: auto;
+}
+.quote {
+  padding-left: 1em;
+  border-left: 0.2em solid white;
+  font-size: 0.75em;
+  text-align: left;
+}
+.quotePerson {
+  padding-left: 1em;
+  text-align: right;
+}
