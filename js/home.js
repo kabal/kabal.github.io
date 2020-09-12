@@ -21,7 +21,7 @@ $(document).ready(function($) {
   $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/'+spreadsheetId+'?ranges='+quotesSheetName+'&fields=sheets.properties.gridProperties.rowCount&key='+apiKey, function(data) {
     var quoteCount = data.sheets[0].properties.gridProperties.rowCount - 1;
     var randomQuoteNumber = Math.floor((Math.random() * quoteCount) + 1);
-    var quoteRange = quotesSheetName + '!' + quotesRangeStart + randomQuoteNumber + ':' + quotesRangeEnd + randomQuoteNumber;
+    var quoteRange = quotesSheetName + '!' + quotesRangeStart + (randomQuoteNumber+1) + ':' + quotesRangeEnd + randomQuoteNumber;
     $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/'+spreadsheetId+'/values/'+quoteRange+'?'+renderOptions+'&key='+apiKey, function(data) {
       var person = data.values[0][0];
       var quote = data.values[0][1].split("\n").join("<br />");
