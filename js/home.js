@@ -12,7 +12,7 @@ $(document).ready(function($) {
   /* Random quote */
   //https://docs.google.com/spreadsheets/d/1FRzir8G1ipGrr-2lUbOlW4iYXnO9a2802d18F-Sps4o
   const apiKey = 'AIzaSyA-gSG6SO5MDJG7DbBdZhj4U3DIW-1UoPY';
-  const spreadsheetId = '1FRzir8G1ipGrr-2lUbOlW4iYXnO9a2802d18F-Sps4o';
+  const spreadsheetId = '16LVWfIh6TrYrzN1FGzdzlPlzogdNqWheAl6gDsnPR3k';
   const quotesSheetName = 'Quotes';
   const quotesRangeStart = 'A';
   const quotesRangeEnd = 'B';
@@ -21,7 +21,7 @@ $(document).ready(function($) {
   $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/'+spreadsheetId+'?ranges='+quotesSheetName+'&fields=sheets.properties.gridProperties.rowCount&key='+apiKey, function(data) {
     var quoteCount = data.sheets[0].properties.gridProperties.rowCount - 1;
     var randomQuoteNumber = Math.floor((Math.random() * quoteCount) + 1);
-    var quoteRange = quotesSheetName + '!' + quotesRangeStart + (randomQuoteNumber+1) + ':' + quotesRangeEnd + randomQuoteNumber;
+    var quoteRange = quotesSheetName + '!' + quotesRangeStart + (randomQuoteNumber+1) + ':' + quotesRangeEnd + (randomQuoteNumber+1);
     $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/'+spreadsheetId+'/values/'+quoteRange+'?'+renderOptions+'&key='+apiKey, function(data) {
       var person = data.values[0][0];
       var quote = data.values[0][1].split("\n").join("<br />");
