@@ -10,7 +10,6 @@ $(document).ready(function($) {
   }
   
   /* Random quote */
-  //https://docs.google.com/spreadsheets/d/1FRzir8G1ipGrr-2lUbOlW4iYXnO9a2802d18F-Sps4o
   const apiKey = 'AIzaSyA-gSG6SO5MDJG7DbBdZhj4U3DIW-1UoPY';
   const spreadsheetId = '16LVWfIh6TrYrzN1FGzdzlPlzogdNqWheAl6gDsnPR3k';
   const quotesSheetName = 'Quotes';
