@@ -13,7 +13,7 @@ $(document).ready(function($) {
     jsonData = data;
     let memberData = data.values;
     
-    const memberPrefix = '<div class="cell medium-4"><span class="memberName">'
+    const memberPrefix = '<div class="cell medium-6 large-4"><span class="memberName">'
     const memberInfix = '</span> <span class="memberYear">(Joined in ';
     const leaderInfix = '</span> <span class="memberYear">(Founded in ';
     const memberSuffix = ')</span></div>';
