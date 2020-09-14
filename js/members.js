@@ -1,4 +1,3 @@
-var jsonData;
 $(document).ready(function($) {
   /* Load Members */
   const apiKey = 'AIzaSyA-gSG6SO5MDJG7DbBdZhj4U3DIW-1UoPY';
@@ -10,7 +9,6 @@ $(document).ready(function($) {
   
   var membersRange = membersSheetName + '!' + membersRangeStart + '2:' + membersRangeEnd;
   $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/'+spreadsheetId+'/values/'+membersRange+'?'+renderOptions+'&key='+apiKey, function(data) {
-    jsonData = data;
     let memberData = data.values;
     
     const memberPrefix = '<div class="cell medium-6 large-4"><span class="memberName">'

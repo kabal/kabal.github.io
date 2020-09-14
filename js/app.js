@@ -8,7 +8,6 @@ $(document).ready(function($) {
   });
 });
 
-var jsonData;
 $(document).ready(function($) {
   /* Random page background */
   var pageBackground = $('.pageBackground');
