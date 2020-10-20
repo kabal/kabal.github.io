@@ -12,7 +12,7 @@ $(document).ready(function($) {
   /* Random page background */
   var pageBackground = $('.pageBackground');
   if (pageBackground.length > 0){
-    var pageBackgroundCount = 18;
+    var pageBackgroundCount = 19;
     pageBackground.css('background-image','url(/images/backgrounds/'+Math.floor((Math.random() * pageBackgroundCount) + 1)+'.jpg)');
   }
 });
