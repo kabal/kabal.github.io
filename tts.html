@@ -61,15 +61,35 @@
               </div>
               <div>
                 <label class="ttslabel" for="voice">Voice</label>
-                <select class="ttsselect"></select>
+                <select id="voice" class="ttsselect"></select>
+                <div class="clearfix"></div>
+              </div>
+              <div>
+                <label class="ttslabel" for="voice">Clear Text On Speak?</label>
+                <input type="checkbox" id="clearOnSpeak" />
                 <div class="clearfix"></div>
               </div>
               <div class="controls">
                 <button id="play" type="submit">Speak</button>
               </div>
+              <br/>
+              <div class="hideByDefault" id="lastSpoken">
+                <label class="ttslabel" for="voice">Last Spoken:</label>
+                <input class="ttstxt" id="lastSpokenText" readonly />
+              </div>
             </form>
             
             <style>
+              .hideByDefault {
+                display: none;
+              }
+            
+              #lastSpokenText {
+                background: none;
+                border: none;
+                color: white;
+              }
+              
               .ttstxt {
                 width: 90%;
               }
@@ -126,6 +146,11 @@
               const pitchValue = document.querySelector(".pitch-value");
               const rate = document.querySelector("#rate");
               const rateValue = document.querySelector(".rate-value");
+              
+              const clearOnSpeak = document.querySelector("#clearOnSpeak");
+              
+              const lastSpoken = document.querySelector("#lastSpoken");
+              const lastSpokenText = document.querySelector("#lastSpokenText");
 
               let voices = [];
 
@@ -158,20 +183,11 @@
 
               function speak() {
                 if (synth.speaking) {
-                  console.error("speechSynthesis.speaking");
                   return;
                 }
 
                 if (inputTxt.value !== "") {
                   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-
-                  utterThis.onend = function (event) {
-                    console.log("SpeechSynthesisUtterance.onend");
-                  };
-
-                  utterThis.onerror = function (event) {
-                    console.error("SpeechSynthesisUtterance.onerror");
-                  };
 
                   const selectedOption =
                     voiceSelect.selectedOptions[0].getAttribute("data-name");
@@ -185,6 +201,15 @@
                   utterThis.pitch = pitch.value;
                   utterThis.rate = rate.value;
                   synth.speak(utterThis);
+                  
+                  inputTxt.blur();
+                  
+                  lastSpoken.style.display = "block";
+                  lastSpokenText.value = '"' + inputTxt.value + '" at ' + new Date().toLocaleTimeString([],{hour: '2-digit', minute:'2-digit', timeZoneName:'short'});
+                  
+                  if (clearOnSpeak.checked){
+                    inputTxt.value = "";
+                  }
                 }
               }
 
@@ -192,9 +217,6 @@
                 event.preventDefault();
 
                 speak();
-
-                inputTxt.blur();
-                inputTxt.value = "";
               };
 
               pitch.onchange = function () {
