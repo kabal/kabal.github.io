@@ -36,7 +36,7 @@
       <section class="grid-container">
         <div class="grid-x grid-padding-x">
           <div class="mainCell cell">
-            <h1>Kabal's Simple Text To Speech</h1>
+            <h2>Kabal's Simple Text To Speech</h1>
 
             <p>
               Enter some text and click the Speak button.<br />Change voices, pitch, and rate using the dropdown menu and sliders.
@@ -45,7 +45,8 @@
             <form class="ttsform">
               <div>
                 <label class="ttslabel" for="txt">Text</label>
-                <textarea id="txt" class="ttstxt" rows="5"></textarea>
+                <textarea id="txt" class="ttstxt" rows="3"></textarea>
+                <div class="clearfix"></div>
               </div>
               <div>
                 <label class="ttslabel"  for="rate">Rate</label>
@@ -72,165 +73,163 @@
               <div class="controls">
                 <button id="play" type="submit">Speak</button>
               </div>
-              <br/>
-              <div class="hideByDefault" id="lastSpoken">
-                <label class="ttslabel" for="voice">Last Spoken:</label>
-                <input class="ttstxt" id="lastSpokenText" readonly />
-              </div>
             </form>
-            
-            <style>
-              .hideByDefault {
-                display: none;
-              }
-            
-              #lastSpokenText {
-                background: none;
-                border: none;
-                color: white;
-              }
-              
-              .ttstxt {
-                width: 90%;
-              }
-
-              .ttsselect {
-                width: 90%;
-              }
-
-              .txt, .ttsform > div {
-                margin-bottom: 10px;
-                overflow: auto;
-              }
-
-              .clearfix {
-                clear: both;
-              }
-
-              .ttslabel {
-                float: left;
-                width: 10%;
-                line-height: 1.5;
-                color: #FFFFFF;
-              }
-
-              .rate-value, .pitch-value {
-                float: right;
-                width: 5%;
-                line-height: 1.5;
-              }
-
-              #rate, #pitch {
-                float: right;
-                width: 85%;
-              }
-
-              .controls {
-                text-align: center;
-                margin-top: 10px;
-              }
-
-              .controls button {
-                padding: 10px;
-                background: white;
-              }
-            </style>
-            <script type="application/javascript">
-              const synth = window.speechSynthesis;
-
-              const inputForm = document.querySelector(".ttsform");
-              const inputTxt = document.querySelector(".ttstxt");
-              const voiceSelect = document.querySelector(".ttsselect");
-
-              const pitch = document.querySelector("#pitch");
-              const pitchValue = document.querySelector(".pitch-value");
-              const rate = document.querySelector("#rate");
-              const rateValue = document.querySelector(".rate-value");
-              
-              const clearOnSpeak = document.querySelector("#clearOnSpeak");
-              
-              const lastSpoken = document.querySelector("#lastSpoken");
-              const lastSpokenText = document.querySelector("#lastSpokenText");
-
-              let voices = [];
-
-              function populateVoiceList() {
-                voices = synth.getVoices()
-                const selectedIndex =
-                  voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
-                voiceSelect.innerHTML = "";
-
-                for (let i = 0; i < voices.length; i++) {
-                  const option = document.createElement("option");
-                  option.textContent = `${voices[i].name} (${voices[i].lang})`;
-
-                  if (voices[i].default) {
-                    option.textContent += " -- DEFAULT";
-                  }
-
-                  option.setAttribute("data-lang", voices[i].lang);
-                  option.setAttribute("data-name", voices[i].name);
-                  voiceSelect.appendChild(option);
-                }
-                voiceSelect.selectedIndex = selectedIndex;
-              }
-
-              populateVoiceList();
-
-              if (speechSynthesis.onvoiceschanged !== undefined) {
-                speechSynthesis.onvoiceschanged = populateVoiceList;
-              }
-
-              function speak() {
-                if (synth.speaking) {
-                  return;
-                }
-
-                if (inputTxt.value !== "") {
-                  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-
-                  const selectedOption =
-                    voiceSelect.selectedOptions[0].getAttribute("data-name");
-
-                  for (let i = 0; i < voices.length; i++) {
-                    if (voices[i].name === selectedOption) {
-                      utterThis.voice = voices[i];
-                      break;
-                    }
-                  }
-                  utterThis.pitch = pitch.value;
-                  utterThis.rate = rate.value;
-                  synth.speak(utterThis);
-                  
-                  inputTxt.blur();
-                  
-                  lastSpoken.style.display = "block";
-                  lastSpokenText.value = '"' + inputTxt.value + '" at ' + new Date().toLocaleTimeString([],{hour: '2-digit', minute:'2-digit', timeZoneName:'short'});
-                  
-                  if (clearOnSpeak.checked){
-                    inputTxt.value = "";
-                  }
-                }
-              }
-
-              inputForm.onsubmit = function (event) {
-                event.preventDefault();
-
-                speak();
-              };
-
-              pitch.onchange = function () {
-                pitchValue.textContent = pitch.value;
-              };
-
-              rate.onchange = function () {
-                rateValue.textContent = rate.value;
-              };
-            </script>
+          </div>
+          <div class="mainCell cell hideByDefault" id="lastSpoken">
+            <label class="ttslabel" for="voice">Last Spoken:</label>
+            <div class="ttstxt" id="lastSpokenText"></div>
+            <div class="clearfix"></div>
           </div>
         </div>
       </section>
     </div>
+    <style>
+      .hideByDefault {
+        display: none;
+      }
+    
+      #lastSpokenText {
+        float: right;
+      }
+      
+      .ttstxt {
+        width: 90%;
+      }
+
+      .ttsselect {
+        width: 90%;
+      }
+
+      #txt, .ttsselect, .ttsform > div {
+        margin-bottom: 5px;
+        overflow: auto;
+      }
+
+      .clearfix {
+        clear: both;
+      }
+
+      .ttslabel {
+        float: left;
+        width: 10%;
+        line-height: 1.5;
+        color: #FFFFFF;
+      }
+
+      .rate-value, .pitch-value {
+        float: right;
+        width: 5%;
+        line-height: 1.5;
+      }
+
+      #rate, #pitch {
+        float: right;
+        width: 85%;
+      }
+
+      .controls {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .controls button {
+        padding: 10px;
+        background: white;
+      }
+    </style>
+    <script type="application/javascript">
+      const synth = window.speechSynthesis;
+
+      const inputForm = document.querySelector(".ttsform");
+      const inputTxt = document.querySelector(".ttstxt");
+      const voiceSelect = document.querySelector(".ttsselect");
+
+      const pitch = document.querySelector("#pitch");
+      const pitchValue = document.querySelector(".pitch-value");
+      const rate = document.querySelector("#rate");
+      const rateValue = document.querySelector(".rate-value");
+      
+      const clearOnSpeak = document.querySelector("#clearOnSpeak");
+      
+      const lastSpoken = document.querySelector("#lastSpoken");
+      const lastSpokenText = document.querySelector("#lastSpokenText");
+
+      let voices = [];
+
+      function populateVoiceList() {
+        voices = synth.getVoices()
+        const selectedIndex =
+          voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
+        voiceSelect.innerHTML = "";
+
+        for (let i = 0; i < voices.length; i++) {
+          const option = document.createElement("option");
+          option.textContent = `${voices[i].name} (${voices[i].lang})`;
+
+          if (voices[i].default) {
+            option.textContent += " -- DEFAULT";
+          }
+
+          option.setAttribute("data-lang", voices[i].lang);
+          option.setAttribute("data-name", voices[i].name);
+          voiceSelect.appendChild(option);
+        }
+        voiceSelect.selectedIndex = selectedIndex;
+      }
+
+      populateVoiceList();
+
+      if (speechSynthesis.onvoiceschanged !== undefined) {
+        speechSynthesis.onvoiceschanged = populateVoiceList;
+      }
+
+      function speak() {
+        if (synth.speaking) {
+          return;
+        }
+
+        if (inputTxt.value !== "") {
+          const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+
+          const selectedOption =
+            voiceSelect.selectedOptions[0].getAttribute("data-name");
+
+          for (let i = 0; i < voices.length; i++) {
+            if (voices[i].name === selectedOption) {
+              utterThis.voice = voices[i];
+              break;
+            }
+          }
+          utterThis.pitch = pitch.value;
+          utterThis.rate = rate.value;
+          synth.speak(utterThis);
+          
+          inputTxt.blur();
+          
+          lastSpoken.style.display = "block";
+          lastSpokenText.innerHTML = '"' + inputTxt.value + '" at ' + new Date().toLocaleTimeString([],{hour: '2-digit', minute:'2-digit', timeZoneName:'short'});
+          
+          if (clearOnSpeak.checked){
+            inputTxt.value = "";
+          }
+        }
+      }
+
+      inputForm.onsubmit = function (event) {
+        event.preventDefault();
+
+        speak();
+      };
+
+      pitch.onchange = function () {
+        pitchValue.textContent = pitch.value;
+      };
+
+      rate.onchange = function () {
+        rateValue.textContent = rate.value;
+      };
+    </script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.1.2/what-input.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.1/js/foundation.min.js"></script>
