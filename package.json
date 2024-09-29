@@ -14,11 +14,11 @@
     "what-input": "^5.2.6"
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.2",
-    "browser-sync": "^2.29.3",
-    "gulp": "^4.0.2",
-    "gulp-load-plugins": "^1.6.0",
-    "gulp-postcss": "^8.0.0",
+    "autoprefixer": "^10.4.20",
+    "browser-sync": "^3.0.3",
+    "gulp": "^5.0.0",
+    "gulp-load-plugins": "^2.0.8",
+    "gulp-postcss": "^10.0.0",
     "gulp-sass": "^5.1.0",
     "sass": "^1.79.4"
   }
