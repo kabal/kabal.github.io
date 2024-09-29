@@ -1,3 +1,5 @@
+const sass = require('gulp-sass')(require('sass'));
+
 var gulp          = require('gulp');
 var browserSync   = require('browser-sync').create();
 var $             = require('gulp-load-plugins')();
@@ -8,13 +10,13 @@ var sassPaths = [
   'node_modules/motion-ui/src'
 ];
 
-function sass() {
+function sassy() {
   return gulp.src('scss/app.scss')
-    .pipe($.sass({
+    .pipe(sass({
       includePaths: sassPaths,
       outputStyle: 'compressed' // if css compressed **file size**
     })
-      .on('error', $.sass.logError))
+      .on('error', sass.logError))
     .pipe($.postcss([
       autoprefixer({ browsers: ['last 2 versions', 'ie >= 9'] })
     ]))
@@ -31,6 +33,6 @@ function serve() {
   gulp.watch("*.html").on('change', browserSync.reload);
 }
 
-gulp.task('sass', sass);
+gulp.task('sass', sassy);
 gulp.task('serve', gulp.series('sass', serve));
 gulp.task('default', gulp.series('sass', serve));
